@@ -1,0 +1,174 @@
+[
+  {
+    "id": 1766080266740,
+    "timestamp": "2025-12-18T17:51:06.730Z",
+    "type": "Telebirr payment initiated: ",
+    "data": {
+      "success": true,
+      "message": "Deposit initiated successfully",
+      "data": {
+        "depositResult": {
+          "retailerDepositTransaction": {
+            "retailer": "69032397866e761cced24645",
+            "wallet": "69032397866e761cced24646",
+            "amount": 10,
+            "tx_ref": "DEP-RET-1766048023722-116",
+            "status": "INITIATED",
+            "_id": "6943c118cb403aa5413ce91e",
+            "createdAt": "2025-12-18T08:53:44.940Z",
+            "updatedAt": "2025-12-18T08:53:44.940Z"
+          },
+          "elsResponse": {
+            "phoneNumber": "+251979006009",
+            "paymentMethod": "679c712f99d7f57b2596ca31",
+            "project": "6768f6261082da40a1fd3c52",
+            "tx_ref": "DEP-RET-1766048023722-116",
+            "status": "pending",
+            "price": 10,
+            "type": "deposit",
+            "retryCounter": 1,
+            "isValidated": false,
+            "_id": "6943c11820125aa6f3f15706",
+            "systemGeneratedTxRef": "16d62a00-e69a-453d-8055-51bfb5ce1979",
+            "createdAt": "2025-12-18T08:53:44.513Z",
+            "updatedAt": "2025-12-18T08:53:44.513Z",
+            "__v": 0,
+            "checkout_url": null
+          }
+        }
+      }
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+    "url": "http://localhost:3000/en/pos"
+  },
+  {
+    "id": 1766080339560,
+    "timestamp": "2025-12-18T17:52:19.556Z",
+    "type": "Connnected with phone numberrr: ",
+    "data": 200,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+    "url": "http://localhost:3000/en/pos"
+  },
+  {
+    "id": 1766080409496,
+    "timestamp": "2025-12-18T17:53:29.485Z",
+    "type": "Connnected with phone numberrr: ",
+    "data": 200,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+    "url": "http://localhost:3000/en/pos"
+  },
+  {
+    "id": 1766080904260,
+    "timestamp": "2025-12-18T18:01:44.253Z",
+    "type": "Connnected with phone numberrr: ",
+    "data": 200,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+    "url": "http://localhost:3000/en/pos"
+  },
+  {
+    "id": 1766080927927,
+    "timestamp": "2025-12-18T18:02:07.917Z",
+    "type": "Connnected with phone numberrr: ",
+    "data": 200,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+    "url": "http://localhost:3000/en/pos"
+  },
+  {
+    "id": 1766080939279,
+    "timestamp": "2025-12-18T18:02:19.269Z",
+    "type": "Telebirr payment initiated: ",
+    "data": {
+      "success": true,
+      "message": "Deposit initiated successfully",
+      "data": {
+        "depositResult": {
+          "retailerDepositTransaction": {
+            "retailer": "69032397866e761cced24645",
+            "wallet": "69032397866e761cced24646",
+            "amount": 10,
+            "tx_ref": "DEP-RET-1766048696548-336",
+            "status": "INITIATED",
+            "_id": "6943c3b9cb403aa5413ce92c",
+            "createdAt": "2025-12-18T09:04:57.492Z",
+            "updatedAt": "2025-12-18T09:04:57.492Z"
+          },
+          "elsResponse": {
+            "phoneNumber": "+251979006009",
+            "paymentMethod": "679c712f99d7f57b2596ca31",
+            "project": "6768f6261082da40a1fd3c52",
+            "tx_ref": "DEP-RET-1766048696548-336",
+            "status": "pending",
+            "price": 10,
+            "type": "deposit",
+            "retryCounter": 1,
+            "isValidated": false,
+            "_id": "6943c3b920125aa6f3f159ce",
+            "systemGeneratedTxRef": "bf1459ee-1ac9-411a-ab1a-3be0f941f6f4",
+            "createdAt": "2025-12-18T09:04:57.175Z",
+            "updatedAt": "2025-12-18T09:04:57.175Z",
+            "__v": 0,
+            "checkout_url": null
+          }
+        }
+      }
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+    "url": "http://localhost:3000/en/pos"
+  },
+  {
+    "id": 1766080959154,
+    "timestamp": "2025-12-18T18:02:39.147Z",
+    "type": "Connnected with phone numberrr: ",
+    "data": 200,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+    "url": "http://localhost:3000/en/pos"
+  },
+  {
+    "id": 1766083290929,
+    "timestamp": "2025-12-18T18:41:30.918Z",
+    "type": "Connnected with phone numberrr: ",
+    "data": 200,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+    "url": "http://localhost:3000/en/pos"
+  },
+  {
+    "id": 1766083449360,
+    "timestamp": "2025-12-18T18:44:09.339Z",
+    "type": "Connnected with phone number: ",
+    "data": "+251979006009",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+    "url": "http://localhost:3000/en/pos"
+  },
+  {
+    "id": 1766083991111,
+    "timestamp": "2025-12-18T18:53:09.712Z",
+    "type": "Connnected with phone number: ",
+    "data": "+251979006009",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+    "url": "http://localhost:3000/en/pos"
+  },
+  {
+    "id": 1766083991982,
+    "timestamp": "2025-12-18T18:53:11.968Z",
+    "type": "Connnected with phone numberrr: ",
+    "data": 200,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+    "url": "http://localhost:3000/en/pos"
+  },
+  {
+    "id": 1766084191665,
+    "timestamp": "2025-12-18T18:56:31.634Z",
+    "type": "Connnected with phone numberrr: ",
+    "data": 200,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+    "url": "http://localhost:3000/en/pos"
+  },
+  {
+    "id": 1766084213293,
+    "timestamp": "2025-12-18T18:56:53.274Z",
+    "type": "Connnected with phone number: ",
+    "data": "+251979006009",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+    "url": "http://localhost:3000/en/pos"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1756140149750,
+    "type": "Buy Button Clicked",
+    "data": 1,
+    "timestamp": "2025-08-25T16:42:29.437Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+    "url": "http://localhost:3000/am"
+  },
+  {
+    "id": 1756142556707,
+    "type": "Buy Button Clicked",
+    "data": 2,
+    "timestamp": "2025-08-25T17:22:36.463Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+    "url": "http://localhost:3000/am"
+  }
+]
