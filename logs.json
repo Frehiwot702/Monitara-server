@@ -170,5 +170,147 @@
     "data": "+251979006009",
     "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
     "url": "http://localhost:3000/en/pos"
+  },
+  {
+    "id": 1766425750869,
+    "code": "1001",
+    "timestamp": "2025-12-22T17:49:09.769Z",
+    "type": "Connnected with phone numberrr: ",
+    "data": 200,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+    "url": "http://localhost:3000/en/pos"
+  },
+  {
+    "id": 1766425753765,
+    "code": "1001",
+    "timestamp": "2025-12-22T17:49:13.562Z",
+    "type": "Telebirr payment initiated: ",
+    "data": {
+      "success": true,
+      "message": "Deposit initiated successfully",
+      "data": {
+        "depositResult": {
+          "retailerDepositTransaction": {
+            "retailer": "69032397866e761cced24645",
+            "wallet": "69032397866e761cced24646",
+            "amount": 10,
+            "tx_ref": "DEP-RET-1766393513351-379",
+            "status": "INITIATED",
+            "_id": "694906aacb403aa5413ce94a",
+            "createdAt": "2025-12-22T08:51:54.703Z",
+            "updatedAt": "2025-12-22T08:51:54.703Z"
+          },
+          "elsResponse": {
+            "phoneNumber": "+251979006009",
+            "paymentMethod": "679c712f99d7f57b2596ca31",
+            "project": "6768f6261082da40a1fd3c52",
+            "tx_ref": "DEP-RET-1766393513351-379",
+            "status": "pending",
+            "price": 10,
+            "type": "deposit",
+            "retryCounter": 1,
+            "isValidated": false,
+            "_id": "694906aa1b2e94374e4949ed",
+            "systemGeneratedTxRef": "7b8bc4d6-b1bb-491a-837c-6feb3bc0d1ce",
+            "createdAt": "2025-12-22T08:51:54.192Z",
+            "updatedAt": "2025-12-22T08:51:54.192Z",
+            "__v": 0,
+            "checkout_url": null
+          }
+        }
+      }
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+    "url": "http://localhost:3000/en/pos"
+  },
+  {
+    "id": 1766425763151,
+    "code": "1001",
+    "timestamp": "2025-12-22T17:49:22.197Z",
+    "type": "Connnected with phone numberrr: ",
+    "data": 200,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+    "url": "http://localhost:3000/en/pos"
+  },
+  {
+    "id": 1766425785320,
+    "code": "1001",
+    "timestamp": "2025-12-22T17:49:42.053Z",
+    "type": "Connnected with phone numberrr: ",
+    "data": 200,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+    "url": "http://localhost:3000/en/pos"
+  },
+  {
+    "id": 1766425955004,
+    "code": "1001",
+    "timestamp": "2025-12-22T17:52:33.904Z",
+    "type": "Connnected with phone numberrr: ",
+    "data": 200,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+    "url": "http://localhost:3000/en/pos"
+  },
+  {
+    "id": 1766425956345,
+    "code": "1001",
+    "timestamp": "2025-12-22T17:52:35.956Z",
+    "type": "Connnected with phone numberrr: ",
+    "data": 200,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+    "url": "http://localhost:3000/en/pos"
+  },
+  {
+    "id": 1766425960990,
+    "code": "1001",
+    "timestamp": "2025-12-22T17:52:40.191Z",
+    "type": "Connnected with phone numberrr: ",
+    "data": 200,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+    "url": "http://localhost:3000/en/pos"
+  },
+  {
+    "id": 1766425965830,
+    "code": "1001",
+    "timestamp": "2025-12-22T17:52:45.488Z",
+    "type": "Connnected with phone numberrr: ",
+    "data": 200,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+    "url": "http://localhost:3000/en/pos"
+  },
+  {
+    "id": 1766425970679,
+    "code": "1001",
+    "timestamp": "2025-12-22T17:52:49.890Z",
+    "type": "Connnected with phone numberrr: ",
+    "data": 200,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+    "url": "http://localhost:3000/en/pos"
+  },
+  {
+    "id": 1766428797887,
+    "code": "1001",
+    "timestamp": "2025-12-22T18:39:44.520Z",
+    "type": "Connnected with phone numberrr: ",
+    "data": 200,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+    "url": "http://localhost:3000/en/pos"
+  },
+  {
+    "id": 1766429476491,
+    "code": "1001",
+    "timestamp": "2025-12-22T18:50:38.104Z",
+    "type": "Connnected with phone numberrr: ",
+    "data": 200,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+    "url": "http://localhost:3000/en/pos"
+  },
+  {
+    "id": 1766437576736,
+    "code": "1001",
+    "timestamp": "2025-12-22T21:05:53.426Z",
+    "type": "Connnected with phone numberrr: ",
+    "data": 200,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+    "url": "http://localhost:3000/en/pos"
   }
 ]
