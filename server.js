@@ -50,12 +50,15 @@ app.use((req, res, next) => {
 // GET /logs
 app.get("/logs", async (req, res) => {
   try {
-    const code = req.query.code;
+    const projectCode =
+      req.headers["x-project-code"] ||
+      req.query.code;
 
     let query = db.collection("logs");
 
-    if (code) {
-      query = query.where("code", "==", code);
+    // Filter only if a code was provided
+    if (projectCode) {
+      query = query.where("code", "==", projectCode);
     }
 
     query = query.orderBy("createdAt", "desc");
@@ -69,7 +72,8 @@ app.get("/logs", async (req, res) => {
 
     res.json(logs);
   } catch (err) {
-    console.error(err);
+    console.error("GET LOGS ERROR:", err);
+
     res.status(500).json({
       error: "Failed to fetch logs",
     });
