@@ -58,9 +58,11 @@ app.get("/logs", async (req, res) => {
       query = query.where("code", "==", code);
     }
 
+    query = query.orderBy("createdAt", "desc");
+
     const snapshot = await query.get();
 
-    const logs = snapshot.docs.map(doc => ({
+    const logs = snapshot.docs.map((doc) => ({
       id: doc.id,
       ...doc.data(),
     }));
@@ -68,7 +70,9 @@ app.get("/logs", async (req, res) => {
     res.json(logs);
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: "Failed to fetch logs" });
+    res.status(500).json({
+      error: "Failed to fetch logs",
+    });
   }
 });
 
