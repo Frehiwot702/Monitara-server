@@ -1,0 +1,11 @@
+# dependencies
+node_modules/
+
+# env files
+.env
+
+# Firebase admin key (VERY IMPORTANT)
+serviceAccountKey.json
+
+# logs file (optional, since it's runtime data)
+logs.json

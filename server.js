@@ -11,6 +11,8 @@ const API_KEY = process.env.NEXT_PUBLIC_LOG_API_KEY;
 // Paths
 const LOG_FILE = path.join(__dirname, 'logs.json');
 
+const db = require("./firebase");
+
 // Ensure logs.json exists
 if (!fs.existsSync(LOG_FILE)) {
   fs.writeFileSync(LOG_FILE, '[]');
@@ -46,20 +48,37 @@ app.use((req, res, next) => {
 });
 
 // GET /logs
-app.get('/logs', (req, res) => {
+app.get("/logs", async (req, res) => {
   try {
-    const logs = JSON.parse(
-      fs.readFileSync(LOG_FILE, 'utf-8')
-    );
-    console.log("READING LOG FILE...", logs.length);
+    const code = req.query.code;
+
+    let query = db.collection("logs");
+
+    if (code) {
+      query = query.where("code", "==", code);
+    }
+
+    const snapshot = await query.get();
+
+    const logs = snapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
 
     res.json(logs);
   } catch (err) {
     console.error(err);
-    res.status(500).json({
-      error: 'Failed to read logs',
-    });
+    res.status(500).json({ error: "Failed to fetch logs" });
   }
+});
+
+app.get("/firebase-test", async (req, res) => {
+  await db.collection("test").add({
+    message: "Firebase is working",
+    time: new Date().toISOString()
+  });
+
+  res.json({ success: true });
 });
 
 app.get('/debug-write', (req, res) => {
@@ -77,28 +96,25 @@ app.get('/debug-write', (req, res) => {
 });
 
 // POST /log
-app.post('/log', (req, res) => {
-  const newLog = {
-    id: Date.now(),
-    code: req.projectCode,
-    timestamp: new Date().toISOString(),
-    ...req.body,
-  };
+app.post("/log", async (req, res) => {
+  try {
+    const newLog = {
+      ...req.body,
+      code: req.projectCode,
+      timestamp: new Date().toISOString(),
+    };
 
+    const docRef = await db.collection("logs").add(newLog);
 
-  console.log("WRITING LOG:", newLog);
-  console.log("FILE PATH:", LOG_FILE);
-  const logs = JSON.parse(fs.readFileSync(LOG_FILE, 'utf-8'));
-  logs.push(newLog);
-
-  if (logs.length > 1000) logs.shift();
-
-  fs.writeFileSync(LOG_FILE, JSON.stringify(logs, null, 2));
-  console.log(`✅ Logged: ${newLog.type}`);
-
-  res.json({ success: true, id: newLog.id });
+    res.json({
+      success: true,
+      id: docRef.id,
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Failed to save log" });
+  }
 });
-
 
 
 // Health check
