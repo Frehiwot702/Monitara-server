@@ -32,6 +32,10 @@ app.use(express.json());
 
 // API key middleware
 app.use((req, res, next) => {
+  if (req.path === "/logs") {
+    return next();
+  }
+  
   const code =
     req.headers['x-project-code'] ||
     req.query.code ||
@@ -50,20 +54,10 @@ app.use((req, res, next) => {
 // GET /logs
 app.get("/logs", async (req, res) => {
   try {
-    const projectCode =
-      req.headers["x-project-code"] ||
-      req.query.code;
-
-    let query = db.collection("logs");
-
-    // Filter only if a code was provided
-    if (projectCode) {
-      query = query.where("code", "==", projectCode);
-    }
-
-    query = query.orderBy("createdAt", "desc");
-
-    const snapshot = await query.get();
+    const snapshot = await db
+      .collection("logs")
+      .orderBy("createdAt", "desc")
+      .get();
 
     const logs = snapshot.docs.map((doc) => ({
       id: doc.id,
