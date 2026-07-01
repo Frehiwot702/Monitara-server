@@ -26,18 +26,7 @@ app.use(cors({
 
 app.use(express.json());
 
-// GET /logs
-app.get('/logs', (req, res) => {
-  try {
-    const logs = JSON.parse(fs.readFileSync(LOG_FILE, 'utf-8'));
-    const filtered = logs.filter(
-      (log) => log.code === req.projectCode
-    );
-    res.json(filtered);
-  } catch {
-    res.status(500).json({ error: 'Failed to read logs' });
-  }
-});
+
 
 // API key middleware
 app.use((req, res, next) => {
@@ -56,6 +45,18 @@ app.use((req, res, next) => {
   next();
 });
 
+// GET /logs
+app.get('/logs', (req, res) => {
+  try {
+    const logs = JSON.parse(fs.readFileSync(LOG_FILE, 'utf-8'));
+    const filtered = logs.filter(
+      (log) => log.code === req.projectCode
+    );
+    res.json(filtered);
+  } catch {
+    res.status(500).json({ error: 'Failed to read logs' });
+  }
+});
 
 // POST /log
 app.post('/log', (req, res) => {
