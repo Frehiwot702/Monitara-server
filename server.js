@@ -51,7 +51,7 @@ app.get('/logs', (req, res) => {
     const logs = JSON.parse(
       fs.readFileSync(LOG_FILE, 'utf-8')
     );
-    console.log("READING LOG FILE...", logs);
+    console.log("READING LOG FILE...", logs.length);
 
     res.json(logs);
   } catch (err) {
@@ -62,7 +62,19 @@ app.get('/logs', (req, res) => {
   }
 });
 
+app.get('/debug-write', (req, res) => {
+  const test = { time: Date.now() };
 
+  const logs = JSON.parse(fs.readFileSync(LOG_FILE, 'utf-8'));
+  logs.push(test);
+
+  fs.writeFileSync(LOG_FILE, JSON.stringify(logs, null, 2));
+
+  res.json({
+    written: test,
+    total: logs.length
+  });
+});
 
 // POST /log
 app.post('/log', (req, res) => {
