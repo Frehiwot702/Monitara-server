@@ -20,11 +20,24 @@ if (!fs.existsSync(LOG_FILE)) {
 // Middleware
 app.use(cors({
   origin: '*',
-  allowedHeaders: ['Content-Type', 'x-project-code'],
+  allowedHeaders: ['Content-Type', 'x-project-code', 'x-api-key'],
   methods: ['GET', 'POST', 'DELETE'],
 }));
 
 app.use(express.json());
+
+// GET /logs
+app.get('/logs', (req, res) => {
+  try {
+    const logs = JSON.parse(fs.readFileSync(LOG_FILE, 'utf-8'));
+    const filtered = logs.filter(
+      (log) => log.code === req.projectCode
+    );
+    res.json(filtered);
+  } catch {
+    res.status(500).json({ error: 'Failed to read logs' });
+  }
+});
 
 // API key middleware
 app.use((req, res, next) => {
@@ -64,18 +77,7 @@ app.post('/log', (req, res) => {
   res.json({ success: true, id: newLog.id });
 });
 
-// GET /logs
-app.get('/logs', (req, res) => {
-  try {
-    const logs = JSON.parse(fs.readFileSync(LOG_FILE, 'utf-8'));
-    const filtered = logs.filter(
-      (log) => log.code === req.projectCode
-    );
-    res.json(filtered);
-  } catch {
-    res.status(500).json({ error: 'Failed to read logs' });
-  }
-});
+
 
 // Health check
 app.get('/', (_, res) => {
