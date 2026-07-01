@@ -8,4 +8,4 @@ node_modules/
 serviceAccountKey.json
 
 # logs file (optional, since it's runtime data)
-logs.json
+logs.jsongit 

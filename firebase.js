@@ -9,6 +9,7 @@ const {
 if (!FIREBASE_PROJECT_ID || !FIREBASE_CLIENT_EMAIL || !FIREBASE_PRIVATE_KEY) {
   throw new Error("Missing Firebase environment variables");
 }
+console.log("ADMIN KEYS:", Object.keys(admin));
 
 admin.initializeApp({
   credential: admin.credential.cert({
