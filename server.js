@@ -51,6 +51,7 @@ app.get('/logs', (req, res) => {
     const logs = JSON.parse(
       fs.readFileSync(LOG_FILE, 'utf-8')
     );
+    console.log("READING LOG FILE...", logs);
 
     res.json(logs);
   } catch (err) {
@@ -61,6 +62,8 @@ app.get('/logs', (req, res) => {
   }
 });
 
+
+
 // POST /log
 app.post('/log', (req, res) => {
   const newLog = {
@@ -70,6 +73,9 @@ app.post('/log', (req, res) => {
     ...req.body,
   };
 
+
+  console.log("WRITING LOG:", newLog);
+  console.log("FILE PATH:", LOG_FILE);
   const logs = JSON.parse(fs.readFileSync(LOG_FILE, 'utf-8'));
   logs.push(newLog);
 
