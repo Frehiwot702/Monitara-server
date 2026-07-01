@@ -48,13 +48,16 @@ app.use((req, res, next) => {
 // GET /logs
 app.get('/logs', (req, res) => {
   try {
-    const logs = JSON.parse(fs.readFileSync(LOG_FILE, 'utf-8'));
-    const filtered = logs.filter(
-      (log) => log.code === req.projectCode
+    const logs = JSON.parse(
+      fs.readFileSync(LOG_FILE, 'utf-8')
     );
-    res.json(filtered);
-  } catch {
-    res.status(500).json({ error: 'Failed to read logs' });
+
+    res.json(logs);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({
+      error: 'Failed to read logs',
+    });
   }
 });
 
